@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #a9aaa7;
+    font-family: "Montserrat", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 6% 6%, rgba(190, 24, 32, 0.72), transparent 18rem),
+        radial-gradient(circle at 96% 7%, rgba(195, 24, 30, 0.68), transparent 18rem),
+        radial-gradient(circle at 12% 40%, rgba(115, 29, 30, 0.55), transparent 26rem),
+        radial-gradient(circle at 91% 65%, rgba(118, 25, 28, 0.58), transparent 25rem),
+        linear-gradient(180deg, #202222 0%, #222323 48%, #202121 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.top-nav {
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: min(74rem, 86%);
+    margin: 0 auto;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: rgba(169, 170, 167, 0.45);
+}
+
+.top-nav nav {
+    display: flex;
+    gap: clamp(3rem, 9vw, 8rem);
+}
+
+.hero {
+    min-height: 37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.intro {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.28;
+    color: rgba(169, 170, 167, 0.42);
+}
+
+.name {
+    margin-top: 0.1rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    color: rgba(198, 198, 195, 0.75);
+}
+
+.hello {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(178, 178, 175, 0.62);
+}
+
+.hero h1 {
+    margin-top: 0.2rem;
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(4.2rem, 8vw, 6.4rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 0;
+    color: rgba(219, 219, 216, 0.72);
+}
+
+.profile-photo {
+    width: 10.5rem;
+    height: 10.5rem;
+    margin-top: -1.1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background:
+        radial-gradient(circle at 50% 25%, #375995, #21345f 55%, #1b2137);
+    box-shadow: 0 1.2rem 2.5rem rgba(0, 0, 0, 0.2);
+}
+
+.call-button {
+    margin-top: 1rem;
+    padding: 0.24rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(205, 211, 205, 0.78);
+    color: #59615e;
+    font-size: 0.58rem;
+    font-weight: 700;
+}
+
+.overview {
+    width: min(58rem, 84%);
+    margin: 1rem auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 0.68fr 1fr;
+    gap: 1.4rem;
+    align-items: end;
+}
+
+.overview-item h2,
+.content-section h2 {
+    margin-bottom: 0.85rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(202, 202, 198, 0.78);
+}
+
+.small-card,
+.content-card {
+    border-radius: 1.25rem;
+    background: rgba(54, 98, 84, 0.82);
+    box-shadow: inset 0 0 4.5rem rgba(224, 236, 222, 0.05);
+}
+
+.small-card {
+    height: 8.6rem;
+    display: grid;
+    place-items: center;
+}
+
+.small-card.narrow {
+    border-radius: 1.15rem;
+}
+
+.line-icon {
+    font-size: 2.4rem;
+    color: rgba(15, 29, 27, 0.72);
+}
+
+.search-bar {
+    width: min(36rem, 70%);
+    height: 2.05rem;
+    margin: 0 auto 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    border-radius: 0.55rem;
+    background: rgba(163, 180, 172, 0.78);
+    color: #56615d;
+}
+
+.search-bar label {
+    font-size: 0.9rem;
+}
+
+.search-bar input {
+    width: 15rem;
+    border: 0;
+    outline: 0;
+    color: #53605b;
+    font: 700 0.9rem "Montserrat", Arial, sans-serif;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: rgba(62, 73, 68, 0.74);
+    opacity: 1;
+}
+
+.content-section {
+    width: min(42rem, 82%);
+    margin: 0 auto 5.6rem;
+}
+
+.content-card {
+    min-height: 17.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.8rem 2rem;
+    text-align: center;
+    color: rgba(181, 189, 184, 0.76);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.18;
+}
+
+.profile-card {
+    min-height: 18rem;
+}
+
+.skills-card {
+    width: min(33.5rem, 100%);
+    min-height: 12.8rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 6.6rem);
+    gap: 1.4rem 2.6rem;
+    padding: 2rem 2.4rem;
+}
+
+.skill-tile {
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.7rem;
+    background: #e2e2e2;
+    color: #111;
+    font-size: 1.15rem;
+    font-weight: 800;
+    box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.18);
+}
+
+.skill-tile.csharp {
+    color: #9a3aa1;
+    font-size: 1.45rem;
+}
+
+.skill-tile.css {
+    color: #1675c0;
+}
+
+.skill-tile.html {
+    color: #f15a24;
+}
+
+.skill-tile.python {
+    color: #2b6ca3;
+}
+
+.skill-tile.javascript {
+    background: #ffe100;
+    border-radius: 0;
+    font-size: 1.65rem;
+}
+
+.skill-tile.mysql {
+    font-size: 0.82rem;
+}
+
+.experience-card,
+.education-card {
+    min-height: 17rem;
+    flex-direction: column;
+    gap: 2.15rem;
+}
+
+.education-card {
+    min-height: 18rem;
+    gap: 1.3rem;
+}
+
+.footer {
+    width: min(74rem, 94%);
+    min-height: 11rem;
+    margin: 2rem auto 0;
+    padding: 3.4rem 18%;
+    border-radius: 6.5rem 6.5rem 0 0;
+    background:
+        radial-gradient(circle at 6% 98%, rgba(78, 176, 145, 0.9), transparent 12rem),
+        linear-gradient(90deg, rgba(172, 194, 184, 0.83), rgba(122, 139, 133, 0.88));
+    color: rgba(233, 238, 234, 0.75);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 2.1rem 5rem;
+}
+
+.contact-icon {
+    display: inline-grid;
+    width: 1.1rem;
+    height: 1.1rem;
+    place-items: center;
+    margin-right: 0.35rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .top-nav {
+        top: 1.4rem;
+        width: 90%;
+        font-size: 0.7rem;
+    }
+
+    .top-nav nav {
+        gap: 1.1rem;
+    }
+
+    .hero {
+        min-height: 32rem;
+        padding-top: 5rem;
+    }
+
+    .profile-photo {
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+
+    .overview {
+        width: 86%;
+        grid-template-columns: 1fr;
+    }
+
+    .search-bar {
+        width: 84%;
+    }
+
+    .content-section {
+        width: 86%;
+        margin-bottom: 4.2rem;
+    }
+
+    .content-card {
+        font-size: 0.95rem;
+    }
+
+    .skills-card {
+        grid-template-columns: repeat(2, 6.2rem);
+        justify-content: center;
+        gap: 1.1rem;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 2.8rem 8%;
+        border-radius: 3.5rem 3.5rem 0 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.intro:hover{
+    transform: scale(1.3);
+    transition: 1s;
+    transition-timing-function: ease;
+}
+
+.name:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.hero hello:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.hero h1:hover{
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.search-bar:hover{
+    transform: scale(1.2);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
